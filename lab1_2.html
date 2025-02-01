@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,18 @@
     <link rel="stylesheet" href="./style.css"> <!-- Спільний CSS для всіх лабораторних -->
     <script src="./script.js" defer></script> <!-- Спільний JS для всіх лабораторних -->
 </head>
+
 <body>
 
     <!-- Основний заголовок -->
     <header>
         <h1>ЗВІТИ З ЛАБОРАТОРНИХ РОБІТ</h1>
         <h2>З ДИСЦИПЛІНИ «ПРОЄКТУВАННЯ WEB-ЗАСТОСУВАНЬ»</h2>
-        
+
         <div class="student-info">
             <p>Студентки групи ЗПІ-зп41 Саділової-Мілашевської Катерини Костянтинівни</p>
-            <img src="./img/student-photo.jpg" alt="Фото студентки" width="150" height="150" style="border-radius: 50%; object-fit: cover;">
+            <img src="./img/student-photo.jpg" alt="Фото студентки" width="150" height="150"
+                style="border-radius: 50%; object-fit: cover;">
         </div>
 
         <!-- Навігація лабораторних робіт -->
@@ -39,7 +42,6 @@
             <div class="nav-item" data-content="self-work">Самостійна робота №2</div>
             <div class="nav-item" data-content="font">Шрифт: Google Fonts</div>
             <div class="nav-item" data-content="css-example">CSS: Таблиці. Фон. Списки</div>
-            <div class="nav-item" data-content="css-pros">CSS: Просунуті стилі</div>
             <div class="nav-item" data-content="conclusion">Висновки</div>
         </div>
 
@@ -51,27 +53,164 @@
             </div>
             <div id="styles" class="content-section">
                 <h3>Способи підключення стилів</h3>
-                <p>Тут буде опис способів підключення стилів для Лабораторної роботи 1.2...</p>
+                <p>Підключення через style тег: <br> style="width: 100%;" <br> За допомогою CSS: <br>
+                <pre>
+                    <code>
+                    &lt;!-- Головна секція --&gt;
+                    .main-content {
+                        text-align: center;
+                        padding: 100px 20px;
+                        min-height: 100vh;
+                        background-image: url('img/Back-site.png');
+                        background-size: cover;
+                        background-position: center;
+                        background-attachment: fixed;
+                    }
+                    
+                    /* Текст на фоні */
+                    .text-content h2 {
+                        font-size: 48px;
+                        color: #fff;
+                        margin-bottom: 10px;
+                    }
+                    </code>
+                    </pre>
+                </p>
             </div>
             <div id="selectors" class="content-section">
                 <h3>Селектори</h3>
-                <p>Тут буде опис селекторів для Лабораторної роботи 1.2...</p>
+                <p>Селектор - це частина CSS-правила, яка повідомляє браузеру, до якого елементу веб-сторінки буде
+                    застосований CSS стиль. Тобто, селектор - це вибірка та формальний опис того елемента чи групи
+                    елементів, до яких будуть застосовані CSS стилі.
+                    <br>
+                    Селектори тегу використані для створення меню сайту
+                    <br>
+                <pre>
+                    <code>
+                        body {
+                            font-family: 'Kyiv', 'Arsenal';
+                            margin: 0;
+                            padding: 0;
+                            background-color: #1e1e1e;
+                            color: #fff;
+                            height: 100%;
+                            overflow-x: hidden;
+                        }
+                        
+                        /* Заголовок і меню */
+                        header {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 20px;
+                            background-color: transparent;
+                            position: fixed;
+                            top: 0;
+                            z-index: 1;
+                            width: 100%;
+                        }
+                    </code></pre>
+                <br>
+                Селектор класу використаний для стилізації всіх секцій сайту одночасно.
+                <br>
+                <pre><code>
+
+                        .logo img {
+                            width: 150px;
+                            height: auto;
+                        }
+
+                        .navbar a {
+                            color: #ADC4C4;
+                            margin: 0 15px;
+                            text-decoration: none;
+                            font-size: 18px;
+                            padding: 10px;
+                            border-radius: 5px;
+                            transition: background-color 0.3s ease;
+                        }
+
+                        .navbar .active {
+                            font-weight: bold; /* Робимо кнопку "Золото" жирною */
+                            color: #484b48;
+}
+                    </code></pre>
+                </p>
             </div>
             <div id="self-work" class="content-section">
                 <h3>Самостійна робота №2</h3>
                 <p>Тут буде опис самостійної роботи для Лабораторної роботи 1.2...</p>
             </div>
             <div id="font" class="content-section">
-                <h3>Шрифт: Google Fonts</h3>
-                <p>Тут буде приклад використання Google Fonts...</p>
+                <h3>Шрифт: Fonts</h3>
+                <p>Шрифти були завантажені з open source джерела.
+                    <br>
+                <pre>
+                        <code>
+                            /* Основні стилі для сайту */
+                            @font-face {
+                                font-family: 'Arsenal';
+                                src: url('./font/Arsenal-Italic.otf') format('otf');
+                                font-weight: normal;
+                                font-style: normal;
+                            }
+                            @font-face {
+                                font-family: 'Kyiv';
+                                src: url('./font/KyivTypeTitling-Thin.woff') format('woff');
+                                font-weight: normal;
+                                font-style: normal;
+                            }
+
+                        </code>
+                    </pre>
+                </p>
             </div>
             <div id="css-example" class="content-section">
                 <h3>CSS: Таблиці. Фон. Списки</h3>
-                <p>Тут буде приклад стилів для таблиць, фонів і списків...</p>
-            </div>
-            <div id="css-pros" class="content-section">
-                <h3>CSS: Просунуті стилі</h3>
-                <p>Тут буде приклад просунутих стилів для Лабораторної роботи 1.2...</p>
+                <p><pre>
+                    <code>
+                        
+                        /* Головна секція */
+                        .main-content {
+                            text-align: center;
+                            padding: 0;
+                            min-height: 100vh;
+                            background-image: url('img/Back-site.png');
+                            background-size: cover;
+                            background-position: center;
+                            background-attachment: fixed;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        /* Текст на фоні */
+                        .text-content h2 {
+                            font-size: 30px;
+                            margin-bottom: 10px;
+                            color: #ADC4C4;
+                        }
+
+                        .text-content p {
+                            font-size: 20px;
+                            margin: 10px 0;
+                            color: #ADC4C4;
+                            font-weight: normal;
+                        }
+
+                        .discount {
+                            font-size: 22px;
+                            font-weight: bold;
+                            color: #86bec2;
+                            margin-top: 20px;
+                        }
+
+                        /* Кнопки категорій */
+                        .categories a:hover {
+                            text-decoration: underline;
+                        }
+                    </code>
+                </pre></p>
             </div>
             <div id="conclusion" class="content-section">
                 <h3>Висновки</h3>
@@ -81,4 +220,5 @@
     </main>
 
 </body>
+
 </html>
